@@ -1,0 +1,99 @@
+\usepackage{float}
+\usepackage[colorlinks = true,
+linkcolor = cyan,
+urlcolor  = cyan,
+citecolor = cyan,
+anchorcolor = cyan]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,latexsym,paralist,mathtools}
+\usepackage{soul} % \ul (underlines)
+
+%%% CITATIONS
+% \usepackage[style=verbose]{biblatex}
+
+%%% CODE
+% \usepackage{listings,courier}
+% \lstloadlanguages{[ISO]C++, Python}
+% \lstset{frame=tb,
+%     language=[ISO]C++,
+%     aboveskip=2mm,
+%     belowskip=2mm,
+%     showstringspaces=false,
+%     columns=flexible,
+%     basicstyle={\small\ttfamily},
+%     numbers=none, % line numbers -- change to "left" if you want them
+%     numberstyle=\tiny\color{gray},
+%     keywordstyle=\bfseries\color{blue},
+%     commentstyle=\itshape\color{dkgreen},
+%     stringstyle=\color{mauve},
+%     breaklines=true,
+%     breakatwhitespace=true,
+%     tabsize=2
+% }
+% % C++ environment
+% \lstnewenvironment{cpp} {
+%     \lstset{
+%     language=[ISO]C++,
+%     tabsize=2,
+%     morekeywords={mutex, semaphore}
+%     }
+% } {}
+% % Python environment
+% \lstnewenvironment{py} {
+%     \lstset{
+%     language=Python,
+%     tabsize=4
+%     }
+% } {}
+% % Large, isolated pieces of code from a file, in C++/Python
+% \newcommand{\cppf}[1]{\lstinputlisting{#1.cpp}}
+% \newcommand{\pyf}[1]{\lstinputlisting[language=Python]{#1.py}}
+
+% Math-mode symbols
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Var}{\text{Var}}
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\newcommand{\splitatcommas}[1]{%
+  \begingroup
+  \begingroup\lccode`~=`, \lowercase{\endgroup
+    \edef~{\mathchar\the\mathcode`, \penalty0 \noexpand\hspace{0pt plus 1em}}%
+  }\mathcode`,="8000 #1%
+  \endgroup
+}
+
+% \lst@CCPutMacro
+%   \lst@ProcessOther {"2A}{%
+%     \lst@ttfamily 
+%        {\raisebox{2pt}{*}}% used with ttfamily
+%        \textasteriskcentered}% used with other fonts
+%   \@empty\z@\@empty
+
+%%% GRAPHICS (images, etc.)
+\usepackage{caption}
+% \usepackage{graphicx}
+% \begin{figure}[H] % H here denoted the placement option.
+%     \centering % centers the figure on the page
+%     \includegraphics[width=0.8\linewidth]{diagram.png}
+%     \caption{Subgenre relationships between selected works.}
+%     \label{fig:graph}
+% \end{figure}
+
+%%% CUSTOM COLORS 
+% \usepackage{xcolor}
+% \definecolor{qtpink}{RGB}{247,223,233}
+% \definecolor{qtlpink}{RGB}{251,235,243}
+% \definecolor{qtblue}{RGB}{224,246,249}
+% \definecolor{qtpurp}{RGB}{171,155,208}
+% \definecolor{qtlpurp}{RGB}{233,213,250}
+
+%%% CUSTOM METHODS
+% \def\code#1{\texttt{#1}}
+% \def\thought#1{\begin{quote}\textbf{#1}\end{quote}}
+\def\textbi#1{\textbf{\textit{#1}}}
+\def\un#1{\begin{center}\ul{#1}\end{center}}
